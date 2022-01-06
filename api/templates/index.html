@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+    <head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <script type="text/javascript" src="{% static 'script.js' %}"></script>
+    </head>
+    <body>
+        <div id="container">
+            {% for item in artist %}
+            <span>
+                <img src={{item.image}}/>
+                <text>{{item.name}}</text>
+            </span>
+            {% endfor %}
+        </div>
+    </body>
+</html>
